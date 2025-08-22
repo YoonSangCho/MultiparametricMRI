@@ -6,12 +6,12 @@ Park H, Cho KR, Lee S, Cho D, Park KH, Cho YS, Song SE. Prediction of Germline B
 (Manuscript in revision, 2025)
 
 ### How to Run
-1. create enviromnent
+**1. create enviromnent**
 - conda create -n brca-mri python=3.10
 - conda activate brca-mri
 - pip install -r requirements.txt
 
-2. Run Experiments
+**2. Run Experiments**
 - python main.py --data_type multivariate
 
 ### Experiment Design
