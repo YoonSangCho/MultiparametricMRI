@@ -1,6 +1,9 @@
 # MultiparametricMRI
 This repository contains the implementation of machine learning (ML) experiments for predicting germline BRCA1/2 mutations in high-risk breast cancer patients using multiparametric MRI (mpMRI) features. The study integrates clinical, morphologic, kinetic (CAD-derived), and diffusion-weighted (ADC) features into ML-based prediction models. We conducted systematic experiments with multiple models, feature sets, and repeated validation to ensure robustness and reproducibility.
 
+### Citation
+Park H, Cho KR, Lee S, Cho D, Park KH, Cho YS, Song SE. Prediction of Germline BRCA Mutations in High-Risk Breast Cancer Patients Using Machine Learning with Multiparametric Breast MRI Features.
+(Manuscript in revision, 2025)
 
 ### How to Run
 1. create enviromnent
