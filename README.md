@@ -1,9 +1,8 @@
 # MultiparametricMRI
-This repository contains the implementation of machine learning (ML) experiments for predicting germline BRCA1/2 mutations in high-risk breast cancer patients using multiparametric MRI (mpMRI) features. The study integrates clinical, morphologic, kinetic (CAD-derived), and diffusion-weighted (ADC) features into ML-based prediction models. We conducted systematic experiments with multiple models, feature sets, and repeated validation to ensure robustness and reproducibility.
+This repository contains the  official codes for the implementation of machine learning (ML) experiments in the predictions of germline BRCA1/2 mutations of high-risk breast cancer patients using multiparametric MRI (mpMRI) features. The study investigated integrates clinical, morphologic, kinetic (CAD-derived), and diffusion-weighted (ADC) features into ML-based prediction models. We conducted systematic experiments with multiple models, feature sets, and repeated validation to ensure robustness and reproducibility.
 
 ### Citation
-Park H, Cho KR, Lee S, Cho D, Park KH, Cho YS, Song SE. Prediction of Germline BRCA Mutations in High-Risk Breast Cancer Patients Using Machine Learning with Multiparametric Breast MRI Features.
-(Manuscript in revision, 2025)
+Park H, Cho KR, Lee S, Cho D, Park KH, Cho YS, Song SE. Prediction of Germline BRCA Mutations in High-Risk Breast Cancer Patients Using Machine Learning with Multiparametric Breast MRI Features (Sensors, Sep. 2025)
 
 ### How to Run
 **1. create enviromnent**
@@ -31,13 +30,14 @@ Park H, Cho KR, Lee S, Cho D, Park KH, Cho YS, Song SE. Prediction of Germline B
   - Random seeds fixed for reproducibility.
 
 **3. Models Compared**
-  - Logistic Regression, Elastic Net, LDA, QDA
-  - k-NN, Naive Bayes, MLP (Neural Network)
-  - Decision Tree, Random Forest, Extra Trees, AdaBoost
-  - XGBoost, LightGBM, CatBoost, SVM (RBF)
+  - Logistic Regression, Elastic Net, SVM (RBF)
+  - Naive Bayes, Linear Disciminant Analysis, Quadratic Discriminant Analysis (QDA) 
+  - k-NN, , MLP (Neural Network)
+  - Decision Tree, Random Forest, Extra Trees, AdaBoost XGBoost,
 
 **4. Evaluation**
+  - 30 repeated runs with different random seeds.
   - Hyperparameter tuning via GridSearchCV with 5-fold Stratified Cross-Validation.
   - ROC-AUC used as the primary metric.
-  - 30 repeated runs with different random seeds.
+  
 
