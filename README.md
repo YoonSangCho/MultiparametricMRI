@@ -12,17 +12,18 @@ Park H, Cho KR, Lee S, Cho D, Park KH, Cho YS, Song SE. Prediction of Germline B
 - pip install -r requirements.txt
 
 **2. Run Experiments**
-- python main.py --data_type multivariate
+- python main.py
+
 
 ### Experiment Design
 
 **1. Data Source**
   - Retrospective dataset of 231 high-risk breast cancer patients (82 BRCA+, 149 BRCA−).
-  - mpMRI features include:
-    - Clinical: Age, histologic grade, tumor size, subtype, etc.
-    - Morphologic: Background parenchymal enhancement (BPE), peritumoral edema, axillary adenopathy, etc.
-    - Kinetic (CAD-derived): Tumor size, angio-volume, peak enhancement, washout component, etc.
-    - ADC values: Derived from DWI sequences.
+  - 1) Clinical & Pathological: Age, histologic grade, mean invasive tumor size, Axillary lymph node metastasis, subtype, etc.
+  - 2) Multiparametric MRI (mpMRI) features include:
+    - (1) Morphologic: Background parenchymal enhancement (BPE), peritumoral edema, axillary adenopathy, etc.
+    - (2) Kinetic (CAD-derived): Tumor size, angio-volume, peak enhancement, washout component, etc.
+    - (3) ADC (DWI-derived): mean, minimum, maximum, standard deviation of ADC values.
 
 **2. Preprocessing**
   - Train/test split (80%/20%) with stratification.
