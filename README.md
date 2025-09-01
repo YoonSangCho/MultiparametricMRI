@@ -13,7 +13,6 @@ Park H, Cho KR, Lee S, Cho D, Park KH, Cho YS, Song SE. Prediction of Germline B
 **2. Run Experiments**
 - python main.py
 
-
 ### Experiment Design
 
 **1. Data Source**
@@ -30,10 +29,11 @@ Park H, Cho KR, Lee S, Cho D, Park KH, Cho YS, Song SE. Prediction of Germline B
   - Random seeds fixed for reproducibility.
 
 **3. Models Compared**
-  - Logistic Regression, Elastic Net, SVM (RBF)
-  - Naive Bayes, Linear Disciminant Analysis, Quadratic Discriminant Analysis (QDA) 
-  - k-NN, , MLP (Neural Network)
-  - Decision Tree, Random Forest, Extra Trees, AdaBoost XGBoost,
+  - Linear models: Logistic Regression, Elastic Net, Support Vector Machine (RBF)
+  - Probabilistic models: Naive Bayes, Linear Disciminant Analysis (LDA), Quadratic Discriminant Analysis (QDA)
+  - Instanced-based model: k-NN
+  - Neural Network: Multilayer perceptron (MLP)
+  - Tree models: Decision Tree, Random Forest, Extra Trees, AdaBoost, CatBoost
 
 **4. Evaluation**
   - 30 repeated runs with different random seeds.
