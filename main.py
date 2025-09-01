@@ -58,7 +58,7 @@ def load_data(data_type="clinical"):
     elif data_type == "clinic-multivariate": 
         X = df[colnames_clinical + colnames_multivariate]
     else:
-        raise ValueError(f"지원하지 않는 data_type: {data_type}")
+        raise ValueError(f"not in my data_type: {data_type}")
     
     # one hot encoding for 'SUBTYPE-luminal' and 'luminal'
     if 'luminal' in X.columns:
@@ -69,10 +69,6 @@ def load_data(data_type="clinical"):
     return X, y
 
 def set_reproducible_seed(estimator, seed: int):
-    """
-    Pipeline이면 clf 스텝에, 아니면 바로 추정기에 random_state/random_seed를 세팅.
-    존재하지 않으면 조용히 패스.
-    """
     try:
         if isinstance(estimator, Pipeline):
             if "clf" in estimator.named_steps:
@@ -153,7 +149,6 @@ def run_experiment(X, y, n_runs=30, save_dir="./results/"):
 
 
 if __name__ == "__main__":
-    ## 추후 argparse나 config 파일 활용
     import os
     import sys
     from models_specs import build_model_specs  # Import the function to build model specifications
